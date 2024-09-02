@@ -1,1 +1,2 @@
-<?php require 'index_view.php'; ?>
+<?php require 'functions.php'; ?>
+<?php require 'router.php'; ?>

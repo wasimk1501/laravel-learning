@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Factors Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .radio-group label {
+            flex: 1;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Risk Factors Questionnaire</h2>
+    <form id="riskForm">
+        <label for="age">Age (between 40 and 90 years)</label>
+        <input type="number" id="age" name="age" min="40" max="90">
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+
+        <label>Sex</label>
+        <div class="radio-group">
+            <label><input type="radio" name="sex" value="Male"> Male</label>
+            <label><input type="radio" name="sex" value="Female"> Female</label>
+        </div>
+
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" name="weight" min="0">
+
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" name="height" min="0">
+
+        <label>Previous Fracture</label>
+        <div class="radio-group">
+            <label><input type="radio" name="previousFracture" value="No"> No</label>
+            <label><input type="radio" name="previousFracture" value="Yes"> Yes</label>
+        </div>
+
+        <label>Parent Fractured Hip</label>
+        <div class="radio-group">
+            <label><input type="radio" name="parentFracturedHip" value="No"> No</label>
+            <label><input type="radio" name="parentFracturedHip" value="Yes"> Yes</label>
+        </div>
+
+        <label>Current Smoking</label>
+        <div class="radio-group">
+            <label><input type="radio" name="currentSmoking" value="No"> No</label>
+            <label><input type="radio" name="currentSmoking" value="Yes"> Yes</label>
+        </div>
+
+        <label>Glucocorticoids</label>
+        <div class="radio-group">
+            <label><input type="radio" name="glucocorticoids" value="No"> No</label>
+            <label><input type="radio" name="glucocorticoids" value="Yes"> Yes</label>
+        </div>
+
+        <label>Rheumatoid Arthritis</label>
+        <div class="radio-group">
+            <label><input type="radio" name="rheumatoidArthritis" value="No"> No</label>
+            <label><input type="radio" name="rheumatoidArthritis" value="Yes"> Yes</label>
+        </div>
+
+        <label>Secondary Osteoporosis</label>
+        <div class="radio-group">
+            <label><input type="radio" name="secondaryOsteoporosis" value="No"> No</label>
+            <label><input type="radio" name="secondaryOsteoporosis" value="Yes"> Yes</label>
+        </div>
+
+        <label>Alcohol 3 or more units/day</label>
+        <div class="radio-group">
+            <label><input type="radio" name="alcohol" value="No"> No</label>
+            <label><input type="radio" name="alcohol" value="Yes"> Yes</label>
+        </div>
+
+        <label for="bmd">Femoral Neck BMD (g/cm²)</label>
+        <input type="number" id="bmd" name="bmd" step="0.01">
+
+        <button type="button" onclick="calculateRisk()">Calculate</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
